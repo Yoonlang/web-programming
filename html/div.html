@@ -16,19 +16,40 @@
             background:#ffd800;
             border:2px solid #353535;
         }
-        ul{
-            width:400px;
-            background:#353535;
-        }
-        li{
-            text-align:left;
-            font-size: x-large;
-            font-weight:bold;
-            color:#ffffff;
-        }
         img{
             width:300px;
         }
+        #wrap{
+            width:905px;
+            height:500px;
+            background-color:#888888;
+            overflow:hidden;
+        }
+        #content{
+            width:400px;
+            height:100%;
+            background-color:#ffd800;
+            border:1px solid #353535;
+            float:left;
+        }
+        #banner{
+            width:500px;
+            height:100%;
+            background-color:#353535;
+            color:#888888;
+            float:left;
+        }
+        dt{
+            font-size: xx-large;
+        }
+        dd{
+            font-size: large;
+        }
+        li{
+            font-size: small;
+            color:#888888;
+        }
+        dt, dd, li, #banner{ text-align:justify; font-weight:bold; }
     </style>
 </head>
 
@@ -40,14 +61,29 @@
     <hr />
     <p><img src="https://t1.kakaocdn.net/kakaocorp/corp_thumbnail/Kakao.png" alt="kakao"></p>
     
-    <nav>
-        <ul>
-            <li><i>KAKAO</i> 자회사 리스트</li>
-            <li>오시는 길</li>
-            <li>추가 리스트</li>
-        </ul>
-        <hr />
-    </nav>
+    <div id="wrap">
+        <div id="content">
+        <dl>
+            <dt><i>KAKAO</i> 자회사 리스트</dt>
+            <dd><a href="http://www.kakao-m.com" target="_blank">카카오M</a></dd>
+            <dd><a href="http://service.kakaomobility.com/" target="_blank">카카오모빌리티</a></dd>
+            <dd><a href="https://www.kakaogamescorp.com/" target="_blank">카카오게임즈</a></dd>
+            <dd><a href="http://kakaoinvestment.com/" target="_blank">카카오인베스트먼트</a></dd><br />
+            <dt>오시는 길</dt>
+            <dd>카카오 본사<li type="square"> 제주특별자치도 제주시 첨단로</li></dd>
+            <dd>판교 오피스<li type="square"> 경기도 성남시 분당구 판교역로</li></dd>
+            <dd>고객센터<li type="square"> 경기도 성남시 분당구 판교역로</li></dd>
+        </dl>
+        </div>
+        <div id="banner">
+         추가 리스트<br />
+        <ol>
+            <li><img src="https://t1.kakaocdn.net/kakaocorp/mw/kakao/travelday_main01_190514.jpg" alt="jeju"><a href="https://jeju.kakao.com/" target="_blank">Jeju with KAKAO</a></li>
+            <li><img src="https://www.bloter.net/wp-content/uploads/2018/08/Kakao-i_Logo.jpg" alt="ai"><a href="https://kakao.ai/" target="_blank">KAKAO AI</a></li>
+        </ol>
+        </div>
+    </div>
+    <hr />
 
     <section>
         <h1>주제</h1>
