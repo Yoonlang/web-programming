@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>선택자 연습</title>
+    <style>
+        * {
+            width: 500px;
+            background-color: #806C4F;
+        }
+        div ul{
+            color: #FFA624;
+        }
+        div h1{
+            background-color: #CCAD7E;
+        }
+        h1:hover{
+            color: #805E2B;
+        }
+        div > h1{
+            color: #FFD89E;
+        }
+        input:focus{
+            background-color: #805E2B;
+            padding: 20px;
+        }
+        input:enabled{
+            color: #FFA624;
+        }
+        ul li{
+            width: 200px;
+            list-style:none;
+            border:1px solid #cccccc;
+            padding: 10px;
+
+        }
+        ul li:nth-child(4n){
+            background-color:#027373;
+        }
+        ul li:nth-child(4n + 1){
+            background-color:#1FA88C;
+        }
+        ul li:nth-child(4n + 2){
+            background-color:#F2D091;
+        }
+        ul li:nth-child(4n + 3){
+            background-color:#F25F29;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li type="square"><h1>헤더입니다</h1></li>
+        </ul>
+
+    </div>
+    <hr />
+
+    <div id="nav">
+        <h1>목록입니다</h1>
+        입력 : <input type="text" name="a" />
+        이름 : <input type="text" name="b" />
+        비밀번호 : <input type="password" name="c" disabled="disabled" value="cdt416z" />
+    </div>
+    <hr />
+
+    <div id="section">
+        <h1>섹션입니다</h1>
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+            <li>menu7</li>
+            <li>menu8</li>
+        </ul>
+    </div>
+    <hr />
+
+    <div id="footer">
+        <h1>푸터입니다</h1>
+
+    </div>
+</body>
+
+</html>
