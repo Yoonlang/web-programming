@@ -104,13 +104,39 @@
         padding: 100px;
         text-align: center;
     }
-    .service h2{
+    .service > h2{
         color: #fff;
         font-size: 25px;
     }
-    .service p{
+    .service > p{
         color: #fff;
         font-size: 16px;
+    }
+    .service .container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+    .service .container .box{
+        position: relative;
+        background: #fff;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .service .container .box img{
+        max-width: 150px;
+    }
+    .service .container .box h2{
+        max-width: 100px;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 1px;
     }
 </style>
 </head>
@@ -145,27 +171,42 @@
                 <li>Javascript</li>
                 <li>Golang</li>
                 <li>Node.js</li>
+            </ul><br />
+            <h3 class="heading">눈여겨보는 IT기업들</h3>
+            <ul class="write">
+                <li>Kakao</li>
+                <li>Naver</li>
+                <li>Amazon</li>
+                <li>Microsoft</li>
+                <li>Google</li>
             </ul>
         </div>
         <div class="window"></div>
     </div>
-    <div class="service">
+    <section class="service">
         <h2>개발자가 된 계기</h2>
-        <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.
-        <div>
-            <a href="https://github.com/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/github.png?raw=true"></a>
-            <h2>Github</h2>
+        <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게 되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.
+        <div class="container">
+            <div class="box">
+                <div>
+                    <a href="https://github.com/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/github.png?raw=true"></a>
+                    <h2>Github</h2>
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <a href="https://www.instagram.com/yoonlang__/" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/pngfuel.png?raw=true"></a>
+                    <h2>Instagram</h2>
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <a href="https://www.acmicpc.net/user/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/beakjoon.png?raw=true"></a>
+                    <h2>BaekJoon</h2>
+                </div>
+            </div>
         </div>
-        <div>
-            <a href="https://github.com/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/github.png?raw=true"></a>
-            <h2>Instagram</h2>
-        </div>
-        <div>
-            <a href="https://github.com/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/github.png?raw=true"></a>
-            <h2></h2>
-        </div>
-    </div>
-
+    </section>
 
 </body>
 
