@@ -31,7 +31,7 @@
     }
     .banner .content{
         position: relative;
-        max-width: 750px;
+        max-width: 800px;
         text-align: center;
     }
     .banner h2{
@@ -113,14 +113,10 @@
         color: #fff;
         font-size: 16px;
     }
-    .service .cover{
-        padding-left: 7%;
-        padding-right: 7%;
-    }
     .service .container{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         margin-top: 60px;
@@ -159,14 +155,14 @@
         max-width: 700px;
     }
     .tech .techtext h2{
-        color: #000;
+        color: #fff;
         margin-bottom: 30px;
         font-size: 35px;
         font-weight: 600;
         letter-spacing: 1px;
     }
     .tech .techtext p{
-        color: #000;
+        color: #fff;
     }
     .tech .techimg{
         max-width: 300px;
@@ -174,12 +170,95 @@
     .tech .techimg img{
         width: 100%;
     }
+    .client{
+        background: #162c3b;
+        padding: 100px;
+        text-align: center;
+    }
+    .client h2{
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .client p{
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .client .clientimg{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .client .clientimg img{
+        width: 200;
+        height: 100;
+        object-fit: contain;
+        opacity: 0.25;
+    }
+    .client .clientimg img:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+    .says{
+        position: relative;
+        background: #12222d;
+        text-align: center;
+        padding: 100px;
 
+    }
+    .says h2{
+        margin-top: 40px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .says .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+    .says .container .box{
+        background: #fff;
+        padding: 60px 50px;
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    .says .container .box p{
+        font-style: italic;
+    }
+    .says .container .box h3{
+        width: 100%;
+        text-align: end;
+        font-weight: 500;
+        color: #3f8ffc;
+    }
+    .contact{
+        background: #162c3b;
+        padding: 80px;
+        text-align: center;
+    }
+    .contact h2{
+        color: #fff;
+        font-weight: 700;
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .contact p{
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+    }
 
-
-
-
-    
 </style>
 </head>
 
@@ -192,8 +271,8 @@
         <img class = "color" src="https://github.com/cdt416z/web-programming/blob/master/html/assets/color.jpg?raw=true">
         <div class="content">
             <h2>최윤석을 소개합니다!</h2>
-            <p>안녕하세요 저는 최윤석입니다. 현재 군 복무 중이고, 경북대학교 컴퓨터학과를 재학 중입니다.<br />
-제 취미로는 EDM과 코딩이 있는데요, 세부적인 내용에 대해선 뒤에서 보여드리겠습니다.<br />봐주셔서 감사합니다.</p>
+            <p>안녕하세요 저는 개발자를 지향하는 최윤석입니다. 현재 군 복무 중이고, 경북대학교 컴퓨터학과를 재학 중입니다.
+저의 관심사부터 시작해서 이 프로젝트를 통해 느낀점까지, 짧고 간단하게 보여드리겠습니다.<br />봐주셔서 감사합니다.</p>
         </div>
     </div>
 
@@ -229,7 +308,6 @@
     <section class="service">
         <h2>개발자가 된 계기</h2>
         <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게 되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.</p>
-        <div class="cover">
         <div class="container">
             <div class="box">
                 <div>
@@ -250,44 +328,69 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <div class="tech">
         <div class="techtext">
-            <h2>Watermelon Sugar</h2>
-            <p>Tastes like strawberries on a summer evenin'
-And it sounds just like a song
-I want more berries and that summer feelin'
-It's so wonderful and warm
-Breathe me in, breathe me out
-I don't know if I could ever go without
-I'm just thinking out loud
-I don't know if I could ever go without
-Strawberries on a summer evenin'
-Baby, you're the end of June
-I want your belly and that summer feelin'
-Getting washed away in you
-Breathe me in, breathe me out
-I don't know if I could ever go without
-I just wanna taste it, I just wanna taste it
-Watermelon sugar high
-Tastes like strawberries on a summer evenin'
-And it sounds just like a song
-I want your belly and that summer feelin'
-I don't know if I could ever go without</p>
+            <h2>BaekJoon Online Judge</h2>
+            <p>제 짧은 개발자 인생에 가장 큰 도움을 준 것은 백준 온라인 저지입니다.
+이 사이트에선 다양한 코딩 문제들을 풀 수 있습니다. 발전적인 강의들도 많지만 제가 느낀 대학 강의들은 그저 암기하거나, 족보를 찾아 외우면
+ 승리하는 그림이었습니다. 근데 문제는 개발자의 실력은 그렇게 해서는 전혀 늘지 않는다는 것이죠. DFS에 대한 강의를 듣고,
+함수를 외우고, 시험을 쳤는데, 막상 실전 문제들을 푸니 한 문제도 만만한 문제가 없었습니다. 이론만 아는 것과 문제를 풀 줄 아는 능력은 
+그야말로 천지차이이며 구현능력, 설계, 시간복잡도 등 하나부터 열까지 부족함을 느꼈고, 반년동안 백준을 통해 알고리즘과 자료구조에 매진했습니다.
+ 짧고도 긴 시간동안 밑바탕을 깔았고, 이제 무엇을 시작하든 두려움 없이 한 발자국 나아갈 수 있습니다. 고맙습니다 백준!</p>
         </div>
         <div class="techimg">
             <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/tech.png?raw=true" />
         </div>
     </div>
 
+    <div class="client">
+        <h2>Our Clients</h2>
+        <p>이 파트는 영상만 보고 코드 확인 없이 직접 만들어봤습니다.<br />
+거의 유사하네요!</p>
+        <div class="clientimg">
+            <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/brand1.png?raw=true" />
+            <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/brand2.png?raw=true" />
+            <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/brand3.png?raw=true" />
+            <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/brand4.png?raw=true" />
+        </div>
+    </div>
 
+    <div class="says">
+        <h2>What Our Client says</h2>
+        <div class="container">
+            <div class="box">
+                <div>
+                    <p>abcdefgabcdefgabcdefgabcdef
+                    defgabcdefgabcdefgabcdefgabcde
+                    cdefgabcdefgabcdefgabcdefgabcd
+                    abcdefgabcdefgabcdefgabcdefgab
+                    defgabcdefgabcdefgabcdefgabcde
+                    cdefgabcdefgabcdefgabcdefgabcd
+                    abcdefgabcdefgabcdefgabcdefgab</p><br />
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <p>abcdefgabcdefgabcdefgabcdef
+                    defgabcdefgabcdefgabcdefgabcde
+                    cdefgabcdefgabcdefgabcdefgabcd
+                    abcdefgabcdefgabcdefgabcdefgab
+                    defgabcdefgabcdefgabcdefgabcde
+                    cdefgabcdefgabcdefgabcdefgabcd
+                    abcdefgabcdefgabcdefgabcdefgab</p><br />
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>이번 프로젝트를 통해 느낀점</h2>
+        <p>HTML을 공부하겠다고 결심한지 어느덧 7일째, 처음엔 이걸 시작하는 게 맞는건지, 이 길이 맞는지, 다른 언어들은 언제 배우지 등등 많은 고민을 했었다. 유튜버에게 질문도 해봤고, 책을 읽으면서 답을 얻으려해봤다. 아직 프로젝트를 완성하진 않았지만 나는 답을 이미 알고있다. 일단 시작하면 된다. github 계정 만들기부터해서 HTML 공부 시작하기, 일일, 주간, 월간 계획 세우기, 책읽기 등등 시작하지 않으면 아무것도 변하지 않는다. 이번 프로젝트를 통해 HTML, CSS의 기초 원리만 알던 나는 div를 통한 레이아웃 구조와 display: flex; 를 통한 flexbox에 대해 이해했고, 나 스스로 직접 사이트를 만들 자신이 생겼다. 앞으로 css를 이용한 프로젝트를 하나 더 하고나서 Javascript를 배울 예정이다.</p>
+    </div>
 
-
-
-
-    
 </body>
 
 
