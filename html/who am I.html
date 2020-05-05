@@ -227,6 +227,7 @@
     .says .container .box{
         background: #fff;
         padding: 60px 50px;
+        margin: 30px;
         width: 450px;
         display: flex;
         justify-content: center;
@@ -258,7 +259,104 @@
         font-weight: 500;
         font-size: 16px;
     }
+    .final{
+        position:relation;
+        width: 100%;
+        display: flex;
+    }
+    .final .left{
+        width: 50%;
+        background: url("https://github.com/cdt416z/web-programming/blob/master/html/assets/red.jpg?raw=true");
+        background-size: cover;
+        background-position: center;
+        padding: 200px;
+    }
+    .final .left .input{
+        margin-bottom: 40px;
+    }
+    .final .left .input input{
+        width: 100%;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
 
+        border-bottom: 2px solid #fff;
+    }
+    .final .left .input input::placeholder{
+        color: #fff;
+    }
+    .final .left .input textarea{
+        width: 100%;
+        min-height: 200px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+    .final .left .input textarea::placeholder{
+        color: #fff;
+    }
+    .final .left .input input[type="submit"]{
+        width: 150px;
+        height: 50px;
+        background: #fff;
+        color: #111;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .final .right{
+        background: url("https://github.com/cdt416z/web-programming/blob/master/html/assets/fes.jpg?raw=true");
+        background-size: contain;
+        background-position: center;
+        width: 50%;
+    }
+    .footer{
+        padding: 20px 100px;
+        display: flex;
+        background: #162c3b;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer > p{
+        text-align: left;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .footer .right{
+        display: flex;
+        text-align: right;
+        padding-left: 20px;
+    }
+    .footer .right p{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .footer .right .i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .right .img{
+        display: inline-block;
+        margin: 0 10px;
+        object-fit: contain;
+    }
+    .footer .right .img img{
+        filter: invert(1);
+        max-width: 20px;
+    }
 </style>
 </head>
 
@@ -362,35 +460,61 @@
         <div class="container">
             <div class="box">
                 <div>
-                    <p>abcdefgabcdefgabcdefgabcdef
-                    defgabcdefgabcdefgabcdefgabcde
-                    cdefgabcdefgabcdefgabcdefgabcd
-                    abcdefgabcdefgabcdefgabcdefgab
-                    defgabcdefgabcdefgabcdefgabcde
-                    cdefgabcdefgabcdefgabcdefgabcd
-                    abcdefgabcdefgabcdefgabcdefgab</p><br />
-                    <h3>Someone Famous</h3>
+                    <p>People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones.</p><br />
+                    <h3>Donald E. Knuth</h3>
                 </div>
             </div>
             <div class="box">
                 <div>
-                    <p>abcdefgabcdefgabcdefgabcdef
-                    defgabcdefgabcdefgabcdefgabcde
-                    cdefgabcdefgabcdefgabcdefgabcd
-                    abcdefgabcdefgabcdefgabcdefgab
-                    defgabcdefgabcdefgabcdefgabcde
-                    cdefgabcdefgabcdefgabcdefgabcd
-                    abcdefgabcdefgabcdefgabcdefgab</p><br />
-                    <h3>Someone Famous</h3>
+                    <p>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</p><br />
+                    <h3>Linus Torvalds</h3>
                 </div>
             </div>
         </div>
     </div>
     <div class="contact">
         <h2>이번 프로젝트를 통해 느낀점</h2>
-        <p>HTML을 공부하겠다고 결심한지 어느덧 7일째, 처음엔 이걸 시작하는 게 맞는건지, 이 길이 맞는지, 다른 언어들은 언제 배우지 등등 많은 고민을 했었다. 유튜버에게 질문도 해봤고, 책을 읽으면서 답을 얻으려해봤다. 아직 프로젝트를 완성하진 않았지만 나는 답을 이미 알고있다. 일단 시작하면 된다. github 계정 만들기부터해서 HTML 공부 시작하기, 일일, 주간, 월간 계획 세우기, 책읽기 등등 시작하지 않으면 아무것도 변하지 않는다. 이번 프로젝트를 통해 HTML, CSS의 기초 원리만 알던 나는 div를 통한 레이아웃 구조와 display: flex; 를 통한 flexbox에 대해 이해했고, 나 스스로 직접 사이트를 만들 자신이 생겼다. 앞으로 css를 이용한 프로젝트를 하나 더 하고나서 Javascript를 배울 예정이다.</p>
+        <p>HTML을 공부하겠다고 결심한지 어느덧 7일째, 처음엔 이걸 시작하는 게 맞는건지, 이 길이 맞는지, 다른 언어들은 언제 배우지 등등 많은 고민을 했었다. 유튜버에게 질문도 해봤고, 책을 읽으면서 답을 얻으려해봤다. 아직 프로젝트를 완성하진 않았지만 나는 답을 이미 알고있다. 일단 시작하면 된다. github 계정 만들기부터해서 HTML 공부 시작하기, 일일, 주간, 월간 계획 세우기, 책읽기 등등 시작하지 않으면 아무것도 변하지 않는다. 이번 프로젝트를 통해 HTML, CSS의 기초 원리만 알던 나는 div를 통한 레이아웃 구조와 flexbox에 대해 이해했고, 나 스스로 직접 사이트를 만들 자신이 생겼다. 앞으로 css를 이용한 프로젝트를 하나 더 하고나서 Javascript를 배울 예정이다.</p>
     </div>
-
+    <div class="final">
+        <div class="left">
+            <div class="form">
+                <div class="input">
+                    <input type="text" name="" placeholder="Full Name">
+                </div>
+                <div class="input">
+                    <input type="text" name="" placeholder="Email Address">
+                </div>
+                <div class="input">
+                    <input type="text" name="" placeholder="Mobile No.">
+                </div>
+                <div class="input">
+                    <textarea placeholder="Write your message here"></textarea>
+                </div>
+                <div class="input">
+                    <input type="submit" name="" value="Send">
+                </div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="footer">
+        <p>Design & Developed By Online Tutorials</p>
+        <div class="right">
+            <p>Follow us on  : </p>
+            <div class="i">
+            <div class="img">
+                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/facebook.png?raw=true" />
+            </div>
+            <div class="img">
+                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/twitter.png?raw=true" />
+            </div>
+            <div class="img">
+                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/linkedin.png?raw=true" />
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
