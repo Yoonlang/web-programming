@@ -24,16 +24,23 @@ body{
     display: flex;
 }
 .header .left h2{
-    color: #ffd800;
+    color: #37d72f;
     font-size: 35px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 }
 .header .left h3{
     color: #fff;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1px;
+}
+.header .right{
+    max-width: 60px;
+    cursor: pointer;
+}
+.header .right img{
+    max-width: 100%;
 }
 .main{
     top: 0;
@@ -62,6 +69,7 @@ body{
     font-size: 18px;
     font-weight: 550;
     margin-bottom: 30px;
+    max-width: 600px;
 }
 .main .text .read{
     width: 150px;
@@ -87,6 +95,18 @@ body{
     bottom: 0;
     height: 90%;
 }
+.main:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #37d72f;
+    transform-origin: top;
+    transform: skewX(-25deg);
+    z-index: -1000;
+}
 video{
     position: absolute;
     top: 0;
@@ -94,10 +114,26 @@ video{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
+    opacity: 0.15;
     z-index: -10000;
 }
-
+.sci{
+    padding: 0 100px;
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    letter-spacing: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.sci li{
+    list-style: none;
+}
+.sci li img{
+    margin-right: 15px;
+    transform: scale(0.5);
+    filter: invert(1);
+}
 </style>
 </head>
 
@@ -120,11 +156,15 @@ video{
             </div>
         </div>
         <div class="man">
-            <img src="https://github.com/cdt416z/web-programming/blob/master/html/2nd%20project/img/health/man.png?raw=true" />
+            <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/man.png?raw=true" />
         </div>
     </div>
-    <video src="https://github.com/cdt416z/web-programming/blob/master/html/2nd%20project/img/health/bg.mp4?raw=true" autoplay muted loop type="mp4"></video>
-    
+    <video src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/bg.mp4?raw=true" autoplay muted loop type="mp4"></video>
+    <ul class="sci">
+        <li><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/twitter.png?raw=true"></li>
+        <li><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/facebook.png?raw=true"></li>
+        <li><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/instagram.png?raw=true"></li>
+    <ul>
 </body>
 
 </html>
