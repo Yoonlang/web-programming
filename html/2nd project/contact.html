@@ -1,3 +1,185 @@
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0d192e;
+        }
+        .banner{
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px;
+            height: 600px;
+            justify-content: space-between;
+            align-items: center;
+            background: #122647;
+            padding: 20px;
+        }
+        .banner .contact{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 75px;
+        }
+        .banner .contact form{
+            position: relative;
+            width: 100%;
+        }
+        .banner .contact form h2{
+            color: #fff;
+            font-size: 2em;
+            font-weight: 500;
+            margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 40px;
+        }
+        .banner .contact form .inputbox{
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .banner .contact form .inputbox:last-child{
+            margin-bottom: 0px;
+        }
+        .banner .contact form .inputbox input, textarea{
+            position: relative;
+            background: transparent;
+            outline: none;
+            border: none;
+            width: 100%;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 300;
+            resize: none;
+        }
+        .banner .contact form .inputbox textarea{
+            height: 100px;
+        }
+        .banner .contact form .inputbox input[type="submit"]{
+            padding: 15px 30px;
+            margin-top: -20px;
+            width: 150px;
+            background: #ff5064;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 700;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            letter-spacing: 4px;
+        }
+        .banner .contact form .inputbox input[type="submit"]:focus{
+            background: #1bfaad;
+            color: #111;
+        }
+        .banner .contact form .inputbox span{
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            font-weight: 300;
+            display: inline-block;
+            pointer-events: none;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s;
+        }
+        .banner .contact form .inputbox input:focus ~ span,
+        .banner .contact form .inputbox textarea:focus ~ span,
+        .banner .contact form .inputbox input:valid ~ span,
+        .banner .contact form .inputbox textarea:valid ~ span{
+            transform: translateY(-24px);
+            color: #1bfaad;
+            font-size: 14px;
+        }
+        .banner .contact form .inputbox input:focus,
+        .banner .contact form .inputbox textarea:focus,
+        .banner .contact form .inputbox input:valid,
+        .banner .contact form .inputbox textarea:valid{
+            border-bottom-color: #fff;
+        }
+        .banner .imgbox{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .banner .imgbox:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ff5064;
+            transform-origin: bottom;
+            transform: skewX(-25deg) translateX(10%);
+        }
+        .banner .imgbox img{
+            position: absolute;
+            bottom: 0;
+            max-height: 95%;
+        }
+        @media (max-width: 991px){
+            .banner .contact{
+                width: 100%;
+                padding: 0 50px;
+            }
+            .banner .contact form{
+                width: 100%;
+                max-width: 500px;
+                padding: 0;
+            }
+            .banner .imgbox{
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="contact">
+            <form>
+                <h2>CONTACT US</h2>
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="text" name="" required="required">
+                    <span>Email Address</span>
+                </div>
+                <div class="inputbox">
+                    <textarea required="required"></textarea>
+                    <span>Type Your Message Here...</span>
+                </div>
+                <div class="inputbox">
+                    <input type="submit" name="" value="SEND">
+                </div>
+            </form>
+        </div>
+        <div class="imgbox">
+            <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/girl.png?raw=true" />
+        </div>
+    </div>
+</body>
 
 </html>
