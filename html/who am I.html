@@ -15,19 +15,20 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        background: #3475ca;
+        background: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 100px;
     }
-    .banner img{
+    .banner video{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.25;
+        opacity: 0.6;
     }
     .banner .content{
         position: relative;
@@ -35,11 +36,11 @@
         text-align: center;
     }
     .banner h2{
-        color: #fff;
+        color: #000;
         font-size: 60px;
     }
     .banner p{
-        color: #fff;
+        color: #000;
         font-size: 18px;
     }
     .banner header{
@@ -54,7 +55,7 @@
         z-index: 10000;
     }
     .banner header .logo{
-        color: #fff;
+        color: #000;
         text-decoration: none;
         font-size: 25px;
         font-weight: 700;
@@ -67,17 +68,42 @@
         background: url("https://raw.githubusercontent.com/cdt416z/web-programming/master/html/assets/toggle.png");
         background-size: cover;
         cursor: pointer;
+        filter: invert(1);
     }
     .about{
         position: relative;
         width: 100%;
+        min-height: 100vh;
         display: flex;
     }
     .about .letter{
         background-color: #162c3b;
-        padding: 100px;
-        width: 50%;
+        padding: 60px;
+        width: 65%;
         height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about .letter .container{
+        position: relative;
+        width: 45%;
+        height: 250px;
+        background: #0c273a;
+        
+        padding: 15px;
+        transition: 0.5s;
+    }
+    .about .letter .container:hover{
+        transform: translate(10px, -10px);
+        box-shadow: -40px 40px 20px rgba(0, 0, 0, 0.5);
+    }
+    .about .letter .container .write h3{
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
     }
     .heading{
         color: #ffd800;
@@ -95,8 +121,8 @@
     }
     .about .window{
         background: url("https://github.com/cdt416z/web-programming/blob/master/html/assets/window.jpg?raw=true");
-        width: 50%;
-        background-size: cover;
+        width: 35%;
+        background-size: contain;
         background-position: center;
     }
     .service{
@@ -134,19 +160,11 @@
     .service .container .box img{
         max-width: 150px;
     }
-    .service .container .box h2{
-        max-width: 100px;
-        font-weight: 500;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
     .tech{
         background: #3f8ffc;
         position: relative;
         width: 100%;
         padding: 100px;
-        padding-top: 180px;
-        margin-top: -180px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -189,11 +207,12 @@
         position: relative;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
     }
     .client .clientimg img{
+        margin-left: 50px;
         width: 200;
         height: 100;
         object-fit: contain;
@@ -207,11 +226,10 @@
         position: relative;
         background: #12222d;
         text-align: center;
-        padding: 100px;
+        padding: 50px;
 
     }
     .says h2{
-        margin-top: 40px;
         color: #fff;
         font-size: 35px;
         font-weight: 700;
@@ -229,13 +247,24 @@
         padding: 60px 50px;
         margin: 30px;
         width: 450px;
+        max-height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: left;
+        transition: 0.2s;
+    }
+    .says .container .box:hover{
+        width: 500px;
+        height: 100%;
     }
     .says .container .box p{
+        font-size: 17px;
         font-style: italic;
+    }
+    .says .container .box:hover p{
+        font-size: 20px;
+        font-weight: 550;
     }
     .says .container .box h3{
         width: 100%;
@@ -269,7 +298,7 @@
         background: url("https://github.com/cdt416z/web-programming/blob/master/html/assets/red.jpg?raw=true");
         background-size: cover;
         background-position: center;
-        padding: 200px;
+        padding: 100px;
     }
     .final .left .input{
         margin-bottom: 40px;
@@ -327,35 +356,58 @@
         justify-content: space-between;
         align-items: center;
     }
-    .footer > p{
+    .footer p{
         text-align: left;
         color: #fff;
         font-size: 18px;
         font-weight: 500;
     }
     .footer .right{
-        display: flex;
         text-align: right;
         padding-left: 20px;
     }
-    .footer .right p{
+    .footer .right span{
         color: #fff;
         font-size: 18px;
         font-weight: 500;
     }
-    .footer .right .i{
+    .footer .right a{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .footer .right .img{
+    .footer .right a{
         display: inline-block;
         margin: 0 10px;
         object-fit: contain;
     }
-    .footer .right .img img{
+    .footer .right a img{
         filter: invert(1);
         max-width: 20px;
+    }
+    @media (max-width: 800px){
+        .about .letter{
+            width: 100%;
+        }
+        .about .letter .container{
+            width: 45%;
+            max-width: 500px;
+        }
+        .about .window{
+            display: none;
+        }
+        .final .left{
+            width: 100%;
+            padding: 80px 120px;
+        }
+        .final .left form{
+            width: 100%;
+            max-width: 500px;
+            padding: 0;
+        }
+        .final .right{
+            display: none;
+        }
     }
 </style>
 </head>
@@ -363,66 +415,105 @@
 <body>
     <div class="banner">
         <header>
-            <a href="https://www.instagram.com/yoonlang__/" class="logo" target="_blank">YoonLang</a>
+            <a href="https://www.instagram.com/yoonlang__/" class="logo" target="_blank">Yoonlang</a>
             <div class="toggle"></div>
         </header>
-        <img class = "color" src="https://github.com/cdt416z/web-programming/blob/master/html/assets/color.jpg?raw=true">
+        <video src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/festival.mp4?raw=true" autoplay muted loop type="mp4"></video>
         <div class="content">
             <h2>최윤석을 소개합니다!</h2>
             <p>안녕하세요 저는 개발자를 지향하는 최윤석입니다. 현재 군 복무 중이고, 경북대학교 컴퓨터학과를 재학 중입니다.
 저의 관심사부터 시작해서 이 프로젝트를 통해 느낀점까지, 짧고 간단하게 보여드리겠습니다.<br />봐주셔서 감사합니다.</p>
         </div>
     </div>
-
     <div class="about">
         <div class="letter">
-            <h3 class="heading">최근 관심사</h3>
-            <ul class="write">
-                <li>HardStyle EDM</li>
-                <li>FrontEnd 개발</li>
-                <li>Golang</li>
-                <li>Algorithm</li>
-                <li>github</li>
-            </ul><br />
-            <h3 class="heading">앞으로 할 공부</h3>
-            <ul class="write">
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Golang</li>
-                <li>Node.js</li>
-            </ul><br />
-            <h3 class="heading">눈여겨보는 IT기업들</h3>
-            <ul class="write">
-                <li>Kakao</li>
-                <li>Naver</li>
-                <li>Amazon</li>
-                <li>Microsoft</li>
-                <li>Google</li>
-                <li>Apple</li>
-            </ul>
+            <div class="container">
+                <h3 class="heading">최근 관심사</h3>
+                <ul class="write">
+                    <li>HardStyle EDM</li>
+                    <li>FrontEnd 개발</li>
+                    <li>Golang</li>
+                    <li>Algorithm</li>
+                    <li>github</li>
+                </ul><br />
+            </div>
+            <div class="container">
+                <h3 class="heading">앞으로 할 공부</h3>
+                <ul class="write">
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Golang</li>
+                    <li>Node.js</li>
+                </ul><br />
+            </div>
+            <div class="container">
+                <h3 class="heading">눈여겨보는 IT기업</h3>
+                <ul class="write">
+                    <li>Kakao</li>
+                    <li>Naver</li>
+                    <li>Amazon</li>
+                    <li>Microsoft</li>
+                    <li>Google</li>
+                    <li>Apple</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h3 class="heading">읽을 도서</h3>
+                <ul class="write">
+                    <li>커리어 스킬</li>
+                    <h3>- John Sonmez</h3>
+                    <li>소프트 스킬
+                    <h3>- John Sonmez</h3>
+                    <li>인간관계론</li>
+                    <h3>- Dale Carnegie</h3>
+                </ul>
+            </div>
+            <div class="container">
+                <h3 class="heading">Algorithms</h3>
+                <ul class="write">
+                    <li>Dynamic Programming</li>
+                    <li>DFS, BFS</li>
+                    <li>Backtracking</li>
+                    <li>Dijkstra</li>
+                    <li>Segment Tree</li>
+                    <li>Spanning Tree</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h3 class="heading">Go to Festival</h3>
+                <ul class="write">
+                    <li>Vector DJ Festival</li>
+                    <li>Ultra Korea</li>
+                    <li>Tommorowland</li>
+                    <li>Defqon1</li>
+                    <li>EDC Korea</li>
+                    <li>5tardium</li>
+                </ul>
+            </div>
         </div>
         <div class="window"></div>
     </div>
     <section class="service">
         <h2>개발자가 된 계기</h2>
         <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게 되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.</p>
+
+        <h1>github, instragram, google+로 로고 바꾸고 3D 이미지로 만들어보기</h1>
         <div class="container">
             <div class="box">
                 <div>
-                    <a href="https://github.com/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/github.png?raw=true"></a>
-                    <h2>Github</h2>
+                    <a href="https://github.com/Yoonlang" target="_blank">
+                        <img src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/github.png?raw=true">
+                    </a>
                 </div>
             </div>
             <div class="box">
                 <div>
                     <a href="https://www.instagram.com/yoonlang__/" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/pngfuel.png?raw=true"></a>
-                    <h2>Instagram</h2>
                 </div>
             </div>
             <div class="box">
                 <div>
                     <a href="https://www.acmicpc.net/user/cdt416z" target="_blank"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/beakjoon.png?raw=true"></a>
-                    <h2>BaekJoon</h2>
                 </div>
             </div>
         </div>
@@ -501,21 +592,11 @@
     <div class="footer">
         <p>Design & Developed By Online Tutorials</p>
         <div class="right">
-            <p>Follow us on  : </p>
-            <div class="i">
-            <div class="img">
-                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/facebook.png?raw=true" />
-            </div>
-            <div class="img">
-                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/twitter.png?raw=true" />
-            </div>
-            <div class="img">
-                <img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/linkedin.png?raw=true" />
-            </div>
-            </div>
+            <span>Follow us on  : </span>
+            <a href="#"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/facebook.png?raw=true" /></a>
+            <a href="#"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/twitter.png?raw=true" /></a>
+            <a href="#"><img src="https://github.com/cdt416z/web-programming/blob/master/html/assets/linkedin.png?raw=true" /></a>
         </div>
     </div>
 </body>
-
-
 </html>
