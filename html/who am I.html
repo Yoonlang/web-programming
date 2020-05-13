@@ -139,24 +139,6 @@
         flex-direction: column;
         overflow: hidden;
     }
-    .service .text{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        padding: 80px;
-        max-width: 1000px;
-        text-align: center;
-        z-index: 5000;
-        color: #3b5999;
-    }
-    .service .text h2{
-        font-size: 35px;
-        margin-bottom: 30px;
-    }
-    .service .text p{
-        font-size: 18px;
-        font-weight: 520;
-    }
     .service .container{
         position: relative;
         display: flex;
@@ -175,11 +157,11 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        transition: all 0.5s;
+        transition: all 0.4s;
     }
     .service .container .box:hover{
         transform: translate(20px, -20px) ;
-        box-shadow: -80px 80px 40px rgba(255, 255, 255, 0.5);
+        box-shadow: -20px 20px 20px rgba(255, 255, 255, 0.5);
     }
     .service .container .box:before{
         content: '';
@@ -189,7 +171,7 @@
         width: 20px;
         height: 100%;
         background: #2a2a2a;
-        transition: 0.5s;
+        transition: 0.4s;
         transform: rotate(0deg) skewY(-45deg);
     }
     .service .container .box:after{
@@ -200,7 +182,7 @@
         width: 100%;
         height: 20px;
         background: #4e4e4e;
-        transition: 0.5s;
+        transition: 0.4s;
         transform: rotate(0deg) skewX(-45deg);
     }
     .service .container .box a span{
@@ -211,7 +193,7 @@
         width: 100%;
         height: 100%;
         display: flex;
-        transition: 0.5s;
+        transition: 0.4s;
         justify-content: center;
         align-items: center;
     }
@@ -227,7 +209,7 @@
         font-size: 60px;
         color: rgba(255, 255, 255, 0.2);
         line-height: 80px;
-        transition: 0.5s;
+        transition: 0.4s;
     }
     .service .container .box:hover .fa{
         color: #fff;
@@ -596,10 +578,6 @@
         <div class="window"></div>
     </div>
     <section class="service">
-        <div class="text">
-            <h2>개발자가 된 계기</h2>
-            <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게 되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.</p>
-        </div>
         <div class="container">
             <div class="box">
                 <a href="https://github.com/Yoonlang" target="_blank">
@@ -1954,9 +1932,8 @@
     </div>
 
     <div class="client">
-        <h2>Our Clients</h2>
-        <p>이 파트는 영상만 보고 코드 확인 없이 직접 만들어봤습니다.<br />
-거의 유사하네요!</p>
+        <h2>개발자가 된 계기</h2>
+        <p>고3 시절 꿈이 없던 저는 수능 점수에 맞춰 컴퓨터학과를 지원했습니다. 다행히도 수학을 좋아하던 저는 코딩을 흥미로워했고, 좋아하게 되었습니다. 하지만 자료구조의 시련 앞에 흥미를 잃어가던 찰나, 입대를 하게되었고 제 인생은 바꼈습니다. 처음 시작은 군대에서 보내는 시간이 아까워서 백준 알고리즘 문제를 풀기 시작했고, 목표 없이 풀던 도중 앞으로 어떤 개발자가 될 지에 대해 고민하기 시작했고, 그 출발점이 바로 지금입니다. FrontEnd부터 BackEnd까지 경험해보는 게 올해 목표입니다.</p>
         <div class="clientimg">
             <img src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/brand1.png?raw=true" />
             <img src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/brand2.png?raw=true" />
