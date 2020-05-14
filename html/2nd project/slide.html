@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>slide</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: url("https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/bg.jpg?raw=true");
+            background-size: cover;
+            color: #fff;
+        }
+        .container .header{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container .header .left{
+            font-size: 25px;
+            font-weight: 1000;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+        }
+        .container .header .right{
+            cursor: pointer;
+        }
+        .container .text{
+            max-width: 700px;
+
+        }
+        .container .text h2{
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+        .container .text span{
+            color: #3fc4ff;
+        }
+        .container .text p{
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 55px;
+        }
+        .container .text a{
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+            background: #fff;   
+            padding: 15px 45px;
+        }
+        .imgbox{
+
+        }
+        .imgbox li{
+            list-style: none;
+            border: 1px solid #fff;
+            margin: 10px;
+        }
+        .imgbox li a{
+
+        }
+        .imgbox li a img{
+            filter: invert(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left">
+                <h2>LOGO</h2>
+            </div>
+            <div class="right">
+                <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/toggle.png?raw=true" />
+            </div>
+        </div>
+        <div class="text">
+            <h2>Hello World,<br />I'm <span>Muhammad Irshad</span></h2>
+            <p>In computer science, a min-max heap is a complete binary tree data structure which combines the usefulness of both a min-heap and a max-heap, that is, it provides constant time retrieval and logarithmic time removal of both the minimum and maximum elements in it.</p>
+            <a href="#">Know More</a>
+        </div>
+        <ul class="imgbox">
+            <li><a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/facebook.png?raw=true" /></a></li>
+            <li><a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/twitter.png?raw=true" /></a></li>
+            <li><a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/linkedin.png?raw=true" /></a></li>
+        </div>
+    </div>
+</body>
+</html>
