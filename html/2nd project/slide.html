@@ -19,6 +19,26 @@
             background: url("https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/bg.jpg?raw=true");
             background-size: cover;
             color: #fff;
+            transition: 0.6s;
+            z-index: 2;
+        }
+        .container.active{
+            transform: translateX(-400px);
+        }
+        #nav{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 100vh;
+            background: #40c3ff;
+            z-index: 1;
+            
+        }
+        
+        #nav ul li a{
+            text-decoration: none;
+            color: #fff;
         }
         .container .header{
             width: 100%;
@@ -28,15 +48,47 @@
             padding: 50px 100px;
             display: flex;
             justify-content: space-between;
+            z-index: 10000;
         }
         .container .header .left{
+            position: relative;
             font-size: 25px;
             font-weight: 1000;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             cursor: pointer;
+            transition: 0.6s;
         }
         .container .header .right{
+            position: relative;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
+        }
+        .container .header .right:before{
+            content: '';
+            position: absolute;
+            top: 7px;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+        }
+        .container .header .right:after{
+            content: '';
+            position: absolute;
+            bottom: 7px;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+        }
+        .container.active .header #toggle:before{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .container.active .header #toggle:after{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
         }
         .container .text{
             max-width: 700px;
@@ -62,32 +114,28 @@
             background: #fff;   
             padding: 15px 45px;
         }
-        .imgbox{
-
-        }
         .imgbox li{
             list-style: none;
             border: 1px solid #fff;
-            margin: 10px;
+            margin: 5px;
+            transform: scale(0.8);
         }
-        .imgbox li a{
-
+        .imgbox li:focus{
+            background: #000;
+            filter: invert(1);
         }
         .imgbox li a img{
             filter: invert(1);
+            transform: scale(0.6);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="sec">
         <div class="header">
-            <div class="left">
-                <h2>LOGO</h2>
-            </div>
-            <div class="right">
-                <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/img/health/toggle.png?raw=true" />
-            </div>
+            <div class="left"><h2>LOGO</h2></div>
+            <div class="right" id="toggle" onclick="toggle()"></div>
         </div>
         <div class="text">
             <h2>Hello World,<br />I'm <span>Muhammad Irshad</span></h2>
@@ -100,5 +148,21 @@
             <li><a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/linkedin.png?raw=true" /></a></li>
         </div>
     </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById('sec');
+            sec.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
+;
