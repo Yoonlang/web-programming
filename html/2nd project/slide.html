@@ -25,7 +25,7 @@
         .container.active{
             transform: translateX(-400px);
         }
-        #nav{
+        #navigation{
             position: fixed;
             top: 0;
             right: 0;
@@ -33,12 +33,28 @@
             height: 100vh;
             background: #40c3ff;
             z-index: 1;
-            
+            display: grid;
+            place-items: center;
+            transition: 0.5s;
         }
-        
-        #nav ul li a{
+        #navigation.active{
+            right: 0;
+        }
+        #navigation ul{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        #navigation ul li{
+            list-style: none;
+        }
+        #navigation ul li a{
             text-decoration: none;
             color: #fff;
+            display: inline-block;
+            font-size: 2em;
+            font-weight: 600;
+            text-transform: uppercase;
         }
         .container .header{
             width: 100%;
@@ -120,13 +136,22 @@
             margin: 5px;
             transform: scale(0.8);
         }
-        .imgbox li:focus{
+        .imgbox li:hover{
             background: #000;
             filter: invert(1);
         }
         .imgbox li a img{
             filter: invert(1);
             transform: scale(0.6);
+        }
+        @media (max-width: 787px){
+            .imgbox{
+                position: absolute;
+                left: 80px;
+                bottom: 30px;
+                display: flex;
+            }
+
         }
     </style>
 </head>
@@ -148,7 +173,7 @@
             <li><a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/slideimg/linkedin.png?raw=true" /></a></li>
         </div>
     </div>
-    <div id="nav">
+    <div id="navigation">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -160,7 +185,9 @@
     <script type="text/javascript">
         function toggle(){
             var sec = document.getElementById('sec');
+            var nav = document.getElementById('nav');
             sec.classList.toggle('active')
+            nav.classList.toggle('active')
         }
     </script>
 </body>
