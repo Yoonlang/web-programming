@@ -22,6 +22,8 @@
         justify-content: center;
         align-items: center;
         padding: 100px;
+        transition: 0.6s;
+        z-index: 2;
     }
     .banner video{
         position: absolute;
@@ -63,7 +65,7 @@
         font-weight: 700;
         letter-spacing: 1.5px;
     }
-    .banner header .toggle{
+    .banner header .right{
         position: relative;
         width: 36px;
         height: 28px;
@@ -71,6 +73,40 @@
         background-size: cover;
         cursor: pointer;
         filter: invert(1);
+    }
+    .banner.active{
+        transform: translateX(-400px);
+    }
+    #navigation{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100vh;
+        background: #222;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        transition: 0.5s;
+    }
+    #navigation.active{
+        right: 0;
+    }
+    #navigation ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    #navigation ul li{
+        list-style: none;
+    }
+    #navigation ul li a{
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: uppercase;
     }
     .about{
         position: relative;
@@ -497,10 +533,10 @@
 </head>
 
 <body>
-    <div class="banner">
+    <div class="banner" id="sec">
         <header>
             <a href="https://www.instagram.com/yoonlang__/" class="logo" target="_blank">Yoonlang</a>
-            <div class="toggle"></div>
+            <div class="right" id="toggle" onclick="toggle()"></div>
         </header>
         <video src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/festival.mp4?raw=true" autoplay muted loop type="mp4"></video>
         <div class="content">
@@ -508,6 +544,15 @@
             <p>안녕하세요 저는 개발자를 지향하는 최윤석입니다. 현재 군 복무 중이고, 경북대학교 컴퓨터학과를 재학 중입니다.
 저의 관심사부터 시작해서 이 프로젝트를 통해 느낀점까지, 짧고 간단하게 보여드리겠습니다.<br />봐주셔서 감사합니다.</p>
         </div>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Developer</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
     <div class="about">
         <div class="letter">
@@ -1994,5 +2039,11 @@
             <a href="#"><img src="https://github.com/Yoonlang/web-programming/blob/master/html/assets/linkedin.png?raw=true" /></a>
         </div>
     </div>
+    <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById('sec');
+            sec.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
