@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: #222;
+            }
+            .container{
+                position: relative;
+                max-width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                grid-template-rows: minmax(100px, auto);
+                margin: 40px;
+                grid-auto-flow: dense;
+                grid-gap: 10px;
+            }
+            .container .box{
+                background: #333;
+                padding: 20px;
+                display: grid;
+                font-size: 20px;
+                place-items: center;
+                text-align: center;
+                color: #fff;
+                transition: 0.5s;
+            }
+            .container .box:hover{
+                background: #e91e63;
+            }
+            .container .box img{
+                position: relative;
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
+            .container .box:nth-child(1){
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+            .container .box:nth-child(2){
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+            .container .box:nth-child(4){
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+            .container .box:nth-child(5){
+                grid-column: span 3;
+                grid-row: span 1;
+            }
+            @media (max-width: 991px){
+                .container{
+                    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+                    grid-template-rows: minmax(auto, auto);
+                }
+                .container .box{
+                    grid-column: unset !important;
+                    grid-row: unset !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/washing-hand.png?raw=true" />
+                    <p>Dale Carnegie was born November 24, 1888 on a farm in Maryville, Missouri.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/cold.png?raw=true" />
+                    <p> He was the second son of farmers James William Carnagey (1852–1941) and his wife Amanda Elizabeth Harbison (1858–1939).</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/flight.png?raw=true" />
+                    <p>Carnegie would develop a longstanding friendship with another Maryville author, Homer Croy.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/first-aid-kit.png?raw=true" />
+                    <p>In 1904, at age 16, his family moved to a farm in Warrensburg, Missouri.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/medical-mask.png?raw=true" />
+                    <p>As a youth, he enjoyed speaking in public and joined his school's debate team.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/cooking.png?raw=true" />
+                    <p>Carnegie said he had to get up at 3 a.m. to feed the pigs and milk his parents' cows before going to school.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="https://github.com/Yoonlang/web-programming/blob/master/html/2nd%20project/girdimg/fever.png?raw=true" />
+                    <p>During high school, he grew interested in the speeches at the various Chautauqua assemblies.</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
