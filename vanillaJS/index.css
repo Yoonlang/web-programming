@@ -3,5 +3,8 @@ body{
 }
 h1{
   color: #fff;
-
+  transition: color 0.5s;
+}
+.clicked{
+  color: #ffd800;
 }
