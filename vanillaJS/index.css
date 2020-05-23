@@ -6,5 +6,5 @@ h1{
   transition: color 0.5s;
 }
 .clicked{
-  color: #ffd800;
+  color: #222;
 }
