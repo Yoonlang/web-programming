@@ -1,10 +1,12 @@
 body{
-  background: #222;
+  background: #ecf0f1;
 }
 h1{
-  color: #fff;
-  transition: color 0.5s;
+  color: #34495e;
 }
 .clicked{
-  color: #222;
+  color: #7f8c8d;
+}
+.point{
+  cursor:pointer;
 }
