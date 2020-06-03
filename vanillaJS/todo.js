@@ -6,7 +6,7 @@ const TODOS_LS = 'toDos';
 
 const toDos = [];
 
-function saveToDos(){
+function saveToDos(){ 
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
