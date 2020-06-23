@@ -33,14 +33,12 @@ function loadName(){
     askForName();
   }
   else{
-    console.log(currentUser);
+    paintGreeting(currentUser);
   }
 }
 
 function init(){
   loadName();
-
-
 }
 
 init();
