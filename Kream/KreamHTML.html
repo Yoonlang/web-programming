@@ -1,34 +1,77 @@
 ﻿<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Kream mainPage</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <style>
-        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-        .top {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width:100%;
-            height:100px;
-            background-color: #eee;
-            z-index:1000;
-        }
-        .top .inner{
-            display:flex;
-            margin:0;
-            padding:0 20px;
+    <head>
+        <meta charset="utf-8" />
+        <title>Kream mainPage</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
-        }
+            body{
+                background-color:#000;
+            }
 
-    </style>
-</head>
+            .top {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width:100%;
+                height:80px;
+                background-color: fff;
+                z-index:1000;
+                display:flex;
+                justify-content:space-between;
+            }
+            .top .left{
+                display:flex;
+                margin:0;
+                padding:10px 40px;
+                display:flex;
+            }
+            .top .left .logo {
+                color: #000;
+                font-size: 30;
+                font-weight: 700;
+                text-decoration: none;
+            }
+            .top .left .logo sup {
+                color: rgb(241, 87, 70);
+                font-size: 12;
+            }
+            .top .search{
+                display:flex;
+            }
+            
+            .top .right{
+                display:flex;
+
+            }
+        </style>
+    </head>
 
 	<body>
         <div class="top">
-            <div class="inner">
-                <a href="#top" class="logo" target="_self">KREAM</a>
+            <div class="left">
+                <a href="#top" class="logo" target="_self">KREAM<sup>beta</sup></a>
+            </div>
+            <div class="search">
+                <div class="searchImg">
+                    <img class="glass" src="https://github.com/Yoonlang/web-programming/blob/master/Kream/glass.png?raw=true"   />
+                </div>
+                <div class="searchBox">
+                    <input type="text" name="" placeholder="브랜드명, 모델명, 모델번호 등" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="shop">
+                    <a href="https://kream.co.kr/search">SHOP</a>
+                </div>
+                <div class="helpCenter">
+                    <a href="https://kream.co.kr/notice">고객센터</a>
+                </div>
+                <div class="login">
+                    <a href="https://kream.co.kr/login">로그인</a>
+                </div>
             </div>
         </div>
         <div class="banner">
@@ -53,4 +96,5 @@
 
         </div>
 	</body>
-</html>
+</html>update
+update
