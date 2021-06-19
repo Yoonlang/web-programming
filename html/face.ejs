@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            outline: none;
+        }   
+        .main{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+            height:100vh;
+            background-color: #333;
+            perspective: 100px;
+        }
+        .main .container{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-wrap:wrap;
+            width:80%;
+            height:80%;
+            background-color: #eee;
+            overflow: hidden;
+            cursor: none;
+
+            box-shadow: 0px 10px 60px 10px rgba(255, 255, 255, 0.8);
+            transform-origin: 50% 0%;
+            transform-style: preserve-3d;
+            transform: rotateX(1deg);
+        }
+        .main .container .R{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width:2.5%;
+            height:5%;
+            margin: 0.1%;
+            z-index: 2;
+            background-color: #eee;
+        }
+        .main .container .R:hover{
+            box-shadow: 0px 0px 20px 10px #4169e1;    
+            cursor: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container" id="container">
+            <% for(var i = 0; i < 703; i++){ %>
+            <div class="R"></div>
+            <% } %>
+        </div>
+    </div>
+    
+</body>
+</html>
